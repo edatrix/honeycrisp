@@ -1,4 +1,10 @@
 <h1>hello, honey!</h1>
-<%= @apples.map { |a| a.type } %><br>
+<% types = @apples.map { |a| a.type } %><br>
+<ul>
+  <% types.each do |t| %>
+  <li><%= t %></li>
+  <% end %>
+</ul>
+
 <%#= @apples.map { |a| a.color } %><br>
 <%#= @apples.map { |a| a.description } %>

@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Apple, :type => :model do
   it "has a type" do
     granny_smith = Apple.create!(:type => "granny_smith")
-
     expect(granny_smith.type).to eq("granny_smith")
   end
 
