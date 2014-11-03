@@ -1,6 +1,8 @@
 class Apple < ActiveRecord::Base
   self.inheritance_column = nil
 
+  validates :type, :presence => true
+
   fuzzily_searchable :type
 
   Apple.bulk_update_fuzzy_type
