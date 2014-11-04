@@ -1,10 +1,17 @@
 <h1>hello, honey!</h1>
-<% types = @apples.map { |a| a.type } %><br>
-<ul>
-  <% types.each do |t| %>
-  <li><%= t %></li>
-  <% end %>
-</ul>
 
-<%#= @apples.map { |a| a.color } %><br>
-<%#= @apples.map { |a| a.description } %>
+<% types = @apples.map { |a| a.type } %><br>
+
+<table>
+  <% types.each do |t| %>
+  <tr>
+    <td><%= t %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= form_for Apple.new do |f| %>
+  <%= f.text_field :type %>
+<%= f.submit "add a new apple" %>
+
+<% end %>
