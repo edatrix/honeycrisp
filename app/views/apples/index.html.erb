@@ -2,16 +2,20 @@
 
 <% types = @apples.map { |a| a.type } %><br>
 
-<table>
-  <% types.each do |t| %>
-  <tr>
-    <td><%= t %></td>
-  </tr>
-  <% end %>
-</table>
+<div class="apples-index">
+  <table>
+    <% types.each do |t| %>
+    <tr>
+      <td><%= t %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
 
-<%= form_for Apple.new do |f| %>
-  <%= f.text_field :type %>
-<%= f.submit "add a new apple" %>
+<div class="new-apple">
+  <%= form_for Apple.new do |f| %>
+    <%= f.text_field :type %><br>
+  <%= f.submit "add a new apple" %>
+</div>
 
 <% end %>
