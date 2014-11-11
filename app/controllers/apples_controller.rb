@@ -13,7 +13,7 @@ class ApplesController < ApplicationController
   private
 
   def apple_params
-    params.require(:apple).permit(:type, :color, :description)
+    params.require(:apple).permit(:type, :color, :description, :yums, :yucks)
   end
 
 end

@@ -8,9 +8,4 @@ class Apple < ActiveRecord::Base
   Apple.bulk_update_fuzzy_type
   Apple.find_by_fuzzy_type("honeycrisp")
 
-  def yum
-  end
-
-  def yuck
-  end
 end

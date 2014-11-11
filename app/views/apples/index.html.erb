@@ -1,25 +1,23 @@
 <h1>hello, honey!</h1>
 
-<% types = @apples.map { |a| a.type } %><br>
+<% @apples.map do |apple| %>
 
 <div class="apples-index">
   <table>
-    <% types.each do |t| %>
     <tr>
       <td>
-        <%= link_to "yum", Apple.find_by(params[:type]).yum %>
-        <%= t %>
-        <%= link_to "yuck", Apple.find_by(params[:type]).yuck %>
+        <%= apple.yums.to_i %>
+        <%= apple.type %>
+        <%= apple.yucks.to_i %>
       </td>
     </tr>
-    <% end %>
   </table>
 </div>
+<% end %>
 
 <div class="new-apple">
   <%= form_for Apple.new do |f| %>
     <%= f.text_field :type %><br>
   <%= f.submit "add a new apple" %>
 </div>
-
 <% end %>
