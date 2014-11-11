@@ -7,8 +7,10 @@
     <tr>
       <td>
         <%= apple.yums.to_i %>
+        <%= button_to "yum", apple_yum_path(:id => apple.id) %>
         <%= apple.type %>
         <%= apple.yucks.to_i %>
+        <%= button_to "yuck", apple_yuck_path(:id => apple.id) %>
       </td>
     </tr>
   </table>

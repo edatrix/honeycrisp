@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   root "apples#index"
   resources :apples
 
+  post "/apples/:id/yum" => "apples#yum", :as => "apple_yum"
+  post "/apples/:id/yuck" => "apples#yuck", :as => "apple_yuck"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

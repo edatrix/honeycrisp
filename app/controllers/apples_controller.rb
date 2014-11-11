@@ -10,6 +10,22 @@ class ApplesController < ApplicationController
     redirect_to apples_path
   end
 
+  def yum
+    @apple = Apple.find(params[:id])
+    yums = @apple.yums.to_i
+    @apple.update(:yums => yums + 1)
+
+    redirect_to :back
+  end
+
+  def yuck
+    @apple = Apple.find(params[:id])
+    yucks = @apple.yucks.to_i
+    @apple.update(:yucks => yucks + 1)
+
+    redirect_to :back
+  end
+
   private
 
   def apple_params
