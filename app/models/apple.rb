@@ -3,9 +3,9 @@ class Apple < ActiveRecord::Base
 
   validates :type, :presence => true
 
-  fuzzily_searchable :type
+  # fuzzily_searchable :type
 
-  Apple.bulk_update_fuzzy_type
-  Apple.find_by_fuzzy_type("honeycrisp")
+  # Apple.bulk_update_fuzzy_type
+  # Apple.find_by_fuzzy_type("honeycrisp")
 
 end

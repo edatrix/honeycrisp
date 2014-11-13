@@ -1,23 +1,22 @@
 <h1>hello, honey!</h1>
 
-<% @apples.map do |apple| %>
+<% @apples.sort.map do |apple| %>
 
 <div class="apples-index">
   <table>
     <tr>
-      <td>
-        <%= apple.yums.to_i %>
-        <%= button_to "yum", apple_yum_path(:id => apple.id) %>
-        <%= apple.type %>
-        <%= apple.yucks.to_i %>
-        <%= button_to "yuck", apple_yuck_path(:id => apple.id) %>
-      </td>
+      <td><%= apple.yums.to_i %></td>
+      <td><%= button_to "yum", apple_yum_path(:id => apple.id) %></td>
+      <td><%= apple.type %></td>
+      <td><%= button_to "yuck", apple_yuck_path(:id => apple.id) %></td>
+      <td><%= apple.yucks.to_i %></td>
     </tr>
   </table>
 </div>
 <% end %>
 
 <div class="new-apple">
+  <h4>don't see your favorite apple?  add it here!</h4>
   <%= form_for Apple.new do |f| %>
     <%= f.text_field :type %><br>
   <%= f.submit "add a new apple" %>
