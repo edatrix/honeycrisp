@@ -1,6 +1,7 @@
 <h1>hello, honey!</h1>
 
-<% @apples.sort.map do |apple| %>
+<% sorted_list = @apples.sort_by { |a| a.difference }.reverse %>
+<% sorted_list.each do |apple| %>
 
 <div class="apples-index">
   <table>

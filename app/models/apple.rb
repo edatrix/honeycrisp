@@ -3,6 +3,9 @@ class Apple < ActiveRecord::Base
 
   validates :type, :presence => true
 
+  def difference
+    self.yums.to_i - self.yucks.to_i
+  end
 
   # fuzzily_searchable :type
 
