@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "User creates a new apple" do
-  scenario 'they see the foobar on the page' do
+  scenario "they see the new apple on the page" do
     visit root_path
 
     fill_in "apple_type", :with => "big apple"
