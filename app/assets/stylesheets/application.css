@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.page-header {
+  margin: 15px;
+  padding: 15px;
+}
+
+.panel {
+  padding: 15px;
+}
+
+.apples-index {
+  padding: 15px;
+}
