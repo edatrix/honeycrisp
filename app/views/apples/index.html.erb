@@ -2,8 +2,6 @@
   <h1><small>you like apples? </small></br>how 'bout them apples?</h1>
 </div>
 
-
-
 <div class="panel panel-default">
   <!-- Default panel contents -->
   <div class="panel-heading">Panel heading</div>
@@ -13,7 +11,7 @@
 
   <!-- Table -->
   <% sorted_list = @apples.sort_by { |a| a.difference }.reverse %>
-<% sorted_list.each do |apple| %>
+  <% sorted_list.each do |apple| %>
   <table class="apples-index">
     <tr>
       <td><%= apple.yums.to_i %></td>
@@ -27,9 +25,11 @@
 </div>
 
 <div class="new-apple">
-  <h4>don't see your favorite apple?  add it here!</h4>
+  <h5>don't see your favorite apple?  add it here!</h4>
   <%= form_for Apple.new do |f| %>
-    <%= f.text_field :type %><br>
+    <%= f.text_field :type %>
+    <br class="clearfix" />
+    <br class="clearfix" />
   <%= f.submit "add a new apple", {class: "btn btn-sm btn-success"} %>
 </div>
 <% end %>
