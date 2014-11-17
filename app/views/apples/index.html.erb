@@ -17,20 +17,19 @@
   <table class="apples-index">
     <tr>
       <td><%= apple.yums.to_i %></td>
-      <td><%= button_to "yum", apple_yum_path(:id => apple.id) %></td>
+      <td><%= button_to "yum", apple_yum_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
       <td><%= apple.type %></td>
-      <td><%= button_to "yuck", apple_yuck_path(:id => apple.id) %></td>
+      <td><%= button_to "yuck", apple_yuck_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
       <td><%= apple.yucks.to_i %></td>
     </tr>
   </table>
   <% end %>
 </div>
 
-
 <div class="new-apple">
   <h4>don't see your favorite apple?  add it here!</h4>
   <%= form_for Apple.new do |f| %>
     <%= f.text_field :type %><br>
-  <%= f.submit "add a new apple" %>
+  <%= f.submit "add a new apple", {class: "btn btn-sm btn-success"} %>
 </div>
 <% end %>
