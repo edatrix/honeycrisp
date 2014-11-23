@@ -15,7 +15,7 @@
  */
 
 html {
-  background: url(http://popbyideas.com/wp-content/uploads/2010/10/apple-basket-picture.jpg) no-repeat center center fixed;
+  background: url(http://nerdenterprises.com/sethdavid/wp-content/uploads/2010/12/apples-red-and-green.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,20 +23,26 @@ html {
 }
 
 .page-header {
-  margin: 15px;
+  margin: 25px;
   padding: 15px;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+  color: black;
 }
 
 .panel {
-  float: center;
+  width: 46%;
+  float: left;
   text-align: center;
   padding: 15px;
-  margin: 15px;
+  margin: 25px;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+  color: black;
 }
 
 .apples-index {
   margin: 0px auto;
-  padding: 15px;
 }
 
 .table-items {
@@ -44,13 +50,32 @@ html {
  }
 
 .new-apple {
+  width: 46%;
+  float: right;
   text-align: center;
-  margin: 15px;
+  margin: 25px;
   padding: 15px;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+  color: black;
 }
 
-.footer {
+.hello {
+  width: 46%;
+  float: right;
   text-align: center;
-  margin: 15px;
+  margin: 25px;
   padding: 15px;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+  color: black;
 }
+
+./*footer {
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+}*/

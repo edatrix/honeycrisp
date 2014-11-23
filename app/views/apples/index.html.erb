@@ -1,18 +1,18 @@
 <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
+  <div class="panel-heading">
+    <h4>Yum? or Yuck?</h4>
+    <h5>click to rate your favorite apples</h5>
+  </div>
   <div class="panel-body">
-    <p>click to like your favorite apple.</p>
-
     <!-- Table -->
     <% sorted_list = @apples.sort_by { |a| a.difference }.reverse %>
     <% sorted_list.each do |apple| %>
     <table class="apples-index">
       <tr>
         <td class="table-items"><h5><%= apple.yums.to_i %></h5></td>
-        <td class="table-items"><%= button_to "yum", apple_yum_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
-        <td class="table-items"><h4><%= apple.type %></h4></td>
-        <td class="table-items"><%= button_to "yuck", apple_yuck_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
+        <td class="table-items"><%= button_to "yum", apple_yum_path(:id => apple.id), {class: "btn btn-sm btn-default"} %></td>
+        <td class="table-items"><h3><%= apple.type %></h3></td>
+        <td class="table-items"><%= button_to "yuck", apple_yuck_path(:id => apple.id), {class: "btn btn-sm btn-default"} %></td>
         <td class="table-items"><h5><%= apple.yucks.to_i %></h5></td>
       </tr>
     </table>
@@ -21,7 +21,7 @@
 </div>
 
 <div class="new-apple">
-  <h5>don't see your favorite apple?  add it here!</h5>
+  <h4>don't see your favorite apple?  add it here!</h4>
   <%= form_for Apple.new do |f| %>
     <%= f.text_field :type %>
     <br class="clearfix" />
@@ -29,3 +29,8 @@
   <%= f.submit "add a new apple", {class: "btn btn-sm btn-success"} %>
 </div>
 <% end %>
+
+<div class="hello">
+  <p>do you like apples?  i know i do!  biting into a crisp, juicy apple is one of life's greatest joys, and i'm always on the lookout for a better bite.  use this app to track what you like and don't like...and to see what others have to say on the subject as well.  thanks for stopping by!</p><br>
+  <p>lauren</p>
+</div>
