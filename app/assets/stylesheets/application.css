@@ -23,11 +23,13 @@ html {
 }
 
 .page-header {
-  margin: 25px;
-  padding: 15px;
+  margin: 40px;
+  padding: 25px;
   background:#7f7f7f;
   background:rgba(255,255,255,0.5);
   color: black;
+  border: black;
+  border-radius: 4px;
 }
 
 .panel {
@@ -35,10 +37,12 @@ html {
   float: left;
   text-align: center;
   padding: 15px;
-  margin: 25px;
+  /*margin: 25px;*/
+  margin-left: 40px;
   background:#7f7f7f;
   background:rgba(255,255,255,0.5);
   color: black;
+  border: black;
 }
 
 .apples-index {
@@ -53,22 +57,27 @@ html {
   width: 46%;
   float: right;
   text-align: center;
-  margin: 25px;
+  /*margin: 25px;*/
+  margin-right: 40px;
   padding: 15px;
   background:#7f7f7f;
   background:rgba(255,255,255,0.5);
   color: black;
+  border-radius: 4px;
 }
 
 .hello {
   width: 46%;
   float: right;
   text-align: center;
-  margin: 25px;
+  /*margin: 25px;*/
+  margin-top: 25px;
+  margin-right: 40px;
   padding: 15px;
   background:#7f7f7f;
   background:rgba(255,255,255,0.5);
   color: black;
+  border-radius: 4px;
 }
 
 ./*footer {
