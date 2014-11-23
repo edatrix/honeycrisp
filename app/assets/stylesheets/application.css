@@ -20,10 +20,13 @@
 }
 
 .panel {
+  float: center;
+  text-align: center;
   padding: 15px;
 }
 
 .apples-index {
+  margin: 0px auto;
   padding: 15px;
 }
 
