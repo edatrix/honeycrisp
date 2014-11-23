@@ -8,25 +8,24 @@
   <div class="panel-body">
     <p>click to like your favorite apple.</p>
 
-
-  <!-- Table -->
-  <% sorted_list = @apples.sort_by { |a| a.difference }.reverse %>
-  <% sorted_list.each do |apple| %>
-  <table class="apples-index">
-    <tr>
-      <td><%= apple.yums.to_i %></td>
-      <td><%= button_to "yum", apple_yum_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
-      <td><%= apple.type %></td>
-      <td><%= button_to "yuck", apple_yuck_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
-      <td><%= apple.yucks.to_i %></td>
-    </tr>
-  </table>
-  <% end %>
+    <!-- Table -->
+    <% sorted_list = @apples.sort_by { |a| a.difference }.reverse %>
+    <% sorted_list.each do |apple| %>
+    <table class="apples-index">
+      <tr>
+        <td class="table-items"><h5><%= apple.yums.to_i %></h5></td>
+        <td class="table-items"><%= button_to "yum", apple_yum_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
+        <td class="table-items"><h4><%= apple.type %></h4></td>
+        <td class="table-items"><%= button_to "yuck", apple_yuck_path(:id => apple.id), {class: "btn btn-xs btn-default"} %></td>
+        <td class="table-items"><h5><%= apple.yucks.to_i %></h5></td>
+      </tr>
+    </table>
+    <% end %>
   </div>
 </div>
 
 <div class="new-apple">
-  <h5>don't see your favorite apple?  add it here!</h4>
+  <h5>don't see your favorite apple?  add it here!</h5>
   <%= form_for Apple.new do |f| %>
     <%= f.text_field :type %>
     <br class="clearfix" />
