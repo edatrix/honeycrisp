@@ -22,6 +22,11 @@ html {
   background-size: cover;
 }
 
+a {
+  color: black;
+  text-decoration: none; /* no underline */
+}
+
 .page-header {
   margin: 40px;
   padding: 25px;
@@ -77,6 +82,16 @@ html {
   background:#7f7f7f;
   background:rgba(255,255,255,0.5);
   color: black;
+  border-radius: 4px;
+}
+
+.show {
+  margin: 40px;
+  padding: 25px;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.5);
+  color: black;
+  border: black;
   border-radius: 4px;
 }
 
