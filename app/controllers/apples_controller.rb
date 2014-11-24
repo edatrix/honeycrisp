@@ -10,6 +10,9 @@ class ApplesController < ApplicationController
     redirect_to apples_path
   end
 
+  def show
+  end
+
   def yum
     @apple = Apple.find(params[:id])
     yums = @apple.yums.to_i
