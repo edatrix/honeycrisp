@@ -11,7 +11,7 @@
       <tr>
         <td class="table-items"><h5><%= apple.yums.to_i %></h5></td>
         <td class="table-items"><%= button_to "yum", apple_yum_path(:id => apple.id), {class: "btn btn-sm btn-default"} %></td>
-        <td class="table-items"><h3><%= apple.type %></h3></td>
+        <td class="table-items"><h3><%= link_to "#{apple.type}", apple_path(:id => apple.id) %></h3></td>
         <td class="table-items"><%= button_to "yuck", apple_yuck_path(:id => apple.id), {class: "btn btn-sm btn-default"} %></td>
         <td class="table-items"><h5><%= apple.yucks.to_i %></h5></td>
       </tr>

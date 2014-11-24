@@ -11,6 +11,7 @@ class ApplesController < ApplicationController
   end
 
   def show
+    @apple = Apple.find(params[:id])
   end
 
   def yum
