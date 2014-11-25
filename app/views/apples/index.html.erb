@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4>Yum? or Yuck?</h4>
+    <h3>Yum? or Yuck?</h3>
     <h5>click to rate your favorite apples</h5>
   </div>
   <div class="panel-body">
@@ -23,7 +23,8 @@
 <div class="new-apple">
   <h4>don't see your favorite apple?  add it here!</h4>
   <%= form_for Apple.new do |f| %>
-    <%= f.text_field :type %>
+    <%= f.text_field :type, :value => "type"  %>
+    <%= f.text_field :description, :value => "one-word description" %>
     <br class="clearfix" />
     <br class="clearfix" />
   <%= f.submit "add a new apple", {class: "btn btn-sm btn-success"} %>
