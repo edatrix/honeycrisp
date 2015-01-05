@@ -1,4 +1,16 @@
 <div class="show">
-  <%= @apple.type %>
-  <%= @apple.description %>
+  <h4><%= @apple.type %></h4>
+  <ul>
+    <%= @apple.description %>
+  </ul>
+  <p>how would you describe this apple?</p>
+    <div>
+    <%= form_for @apple do |f| %>
+      <%= f.text_field :description, :value => nil %>
+      <br class="clearfix" />
+      <br class="clearfix" />
+    <%= f.submit "add your description", :class => "btn btn-sm btn-success" %>
+    <% end %>
+  </div>
 </div>
+

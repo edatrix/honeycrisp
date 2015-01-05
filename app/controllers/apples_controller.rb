@@ -14,6 +14,17 @@ class ApplesController < ApplicationController
     @apple = Apple.find(params[:id])
   end
 
+  def edit
+    @apple = Apple.find(params[:id])
+  end
+
+  def update
+    @apple = Apple.find(params[:id])
+    @apple.update(apple_params)
+
+    redirect_to :back
+  end
+
   def yum
     @apple = Apple.find(params[:id])
     yums = @apple.yums.to_i
